@@ -1,13 +1,4 @@
-﻿using System.Net.Security;
-using System.Numerics;
-using System.Reflection.Metadata.Ecma335;
-using System.Buffers.Binary;
-using System.Diagnostics;
-using System.Diagnostics.CodeAnalysis;
-using System.Globalization;
-using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
-using System.Runtime.Versioning;
+﻿using System.Numerics;
 
 namespace LaC_Sharp {
 
