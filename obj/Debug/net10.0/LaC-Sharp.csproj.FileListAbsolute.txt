@@ -1,0 +1,12 @@
+I:\OneDrive\Programmieren\VS Projekte\LaC-Sharp\bin\Debug\net10.0\LaC-Sharp.deps.json
+I:\OneDrive\Programmieren\VS Projekte\LaC-Sharp\bin\Debug\net10.0\LaC-Sharp.dll
+I:\OneDrive\Programmieren\VS Projekte\LaC-Sharp\bin\Debug\net10.0\LaC-Sharp.pdb
+I:\OneDrive\Programmieren\VS Projekte\LaC-Sharp\obj\Debug\net10.0\LaC-Sharp.GeneratedMSBuildEditorConfig.editorconfig
+I:\OneDrive\Programmieren\VS Projekte\LaC-Sharp\obj\Debug\net10.0\LaC-Sharp.AssemblyInfoInputs.cache
+I:\OneDrive\Programmieren\VS Projekte\LaC-Sharp\obj\Debug\net10.0\LaC-Sharp.AssemblyInfo.cs
+I:\OneDrive\Programmieren\VS Projekte\LaC-Sharp\obj\Debug\net10.0\LaC-Sharp.csproj.CoreCompileInputs.cache
+I:\OneDrive\Programmieren\VS Projekte\LaC-Sharp\obj\Debug\net10.0\LaC-Sharp.sourcelink.json
+I:\OneDrive\Programmieren\VS Projekte\LaC-Sharp\obj\Debug\net10.0\LaC-Sharp.dll
+I:\OneDrive\Programmieren\VS Projekte\LaC-Sharp\obj\Debug\net10.0\refint\LaC-Sharp.dll
+I:\OneDrive\Programmieren\VS Projekte\LaC-Sharp\obj\Debug\net10.0\LaC-Sharp.pdb
+I:\OneDrive\Programmieren\VS Projekte\LaC-Sharp\obj\Debug\net10.0\ref\LaC-Sharp.dll

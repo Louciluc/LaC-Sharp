@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LaC-Sharp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+33b7cba2675b8242970a6ca16583a17ad4ecba3d")]
 [assembly: System.Reflection.AssemblyProductAttribute("LaC-Sharp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LaC-Sharp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
