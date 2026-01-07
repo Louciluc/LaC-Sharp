@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "I:\\OneDrive\\Programmieren\\VS Projekte\\LaC-Sharp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B187D038-D44C-FC59-AD8A-75950ED77467}|LaC-Sharp.csproj|i:\\onedrive\\programmieren\\vs projekte\\lac-sharp\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B187D038-D44C-FC59-AD8A-75950ED77467}|LaC-Sharp.csproj|solutionrelative:main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DA4AF495-53C2-4A54-B5BE-DB0E2157F6B5}|..\\TestApp\\TestApp.csproj|i:\\onedrive\\programmieren\\vs projekte\\testapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DA4AF495-53C2-4A54-B5BE-DB0E2157F6B5}|..\\TestApp\\TestApp.csproj|i:\\onedrive\\programmieren\\vs projekte\\testapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B187D038-D44C-FC59-AD8A-75950ED77467}|LaC-Sharp.csproj|i:\\onedrive\\programmieren\\vs projekte\\lac-sharp\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B187D038-D44C-FC59-AD8A-75950ED77467}|LaC-Sharp.csproj|solutionrelative:main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -17,7 +17,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -29,26 +29,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "I:\\OneDrive\\Programmieren\\VS Projekte\\TestApp\\Program.cs",
               "RelativeDocumentMoniker": "..\\TestApp\\Program.cs",
               "ToolTip": "I:\\OneDrive\\Programmieren\\VS Projekte\\TestApp\\Program.cs",
               "RelativeToolTip": "..\\TestApp\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABCAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAowCQAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-06T17:40:23.823Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Main.cs",
               "DocumentMoniker": "I:\\OneDrive\\Programmieren\\VS Projekte\\LaC-Sharp\\Main.cs",
               "RelativeDocumentMoniker": "Main.cs",
               "ToolTip": "I:\\OneDrive\\Programmieren\\VS Projekte\\LaC-Sharp\\Main.cs",
               "RelativeToolTip": "Main.cs",
-              "ViewState": "AgIAAGEBAAAAAAAAAAAAAH0BAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAE8BAAAAAAAAAAAAAF4BAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-05T16:57:13.14Z",
               "EditorCaption": ""

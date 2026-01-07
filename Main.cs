@@ -1,9 +1,7 @@
-﻿using System.Dynamic;
+﻿using System.Collections;
 using System.Numerics;
 
 namespace LazyCSharp {
-
-
 	public class LazyType<T>(Func<T> value, bool isConstValue = false)  {
 
 
@@ -45,11 +43,11 @@ namespace LazyCSharp {
 		/// <summary>
 		/// Creates lambda new lazy value that represents the sum of two specified lazy values.
 		/// </summary>
-		/// <remarks>The addition is performed lazily; the operands are not evaluated until the result's value is
+		/// <remarks>The addition is performed lazily; the operands are not evaluated until the lowestUnchecked's value is
 		/// requested.</remarks>
 		/// <typeparam name="T1">The type of the first operand. Must implement <see cref="IAdditionOperators{T1, T2, TResult}"/> with the other types (<typeparamref name="T2"/>, <typeparamref name="TResult"/>).</typeparam>
 		/// <typeparam name="T2">The type of the second operand.</typeparam>
-		/// <typeparam name="TResult">The type of the result produced by the addition.</typeparam>
+		/// <typeparam name="TResult">The type of the lowestUnchecked produced by the addition.</typeparam>
 		/// <param name="a">The first summand, provided as lambda lazy value.</param>
 		/// <param name="b">The second summand, provided as lambda lazy value.</param>
 		/// <returns>A <see cref="LazyType{T}"/> whose value is computed by adding the values of <paramref name="a"/> and <paramref name="b"/>
@@ -59,11 +57,11 @@ namespace LazyCSharp {
 		/// <summary>
 		/// Creates lambda new lazy value that represents the difference of two specified lazy values.
 		/// </summary>
-		/// <remarks>The subtraction is performed lazily; the operands are not evaluated until the result's value is
+		/// <remarks>The subtraction is performed lazily; the operands are not evaluated until the lowestUnchecked's value is
 		/// requested.</remarks>
 		/// <typeparam name="T1">The type of the minuend. Must implement <see cref="ISubtractionOperators{T1, T2, TResult}"/> with the other types (<typeparamref name="T2"/>, <typeparamref name="TResult"/>).</typeparam>
 		/// <typeparam name="T2">The type of the subtrahend.</typeparam>
-		/// <typeparam name="TResult">The type of the result produced by the subtraction.</typeparam>
+		/// <typeparam name="TResult">The type of the lowestUnchecked produced by the subtraction.</typeparam>
 		/// <param name="a">The minuend, provided as lambda lazy value.</param>
 		/// <param name="b">The subtrahend, provided as lambda lazy value.</param>
 		/// <returns>A <see cref="LazyType{T}"/> whose value is computed by subtracting the value of <paramref name="b"/> from <paramref name="a"/>
@@ -73,11 +71,11 @@ namespace LazyCSharp {
 		/// <summary>
 		/// Creates lambda new lazy value that represents the product of two specified lazy values.
 		/// </summary>
-		/// <remarks>The multiplication is performed lazily; the operands are not evaluated until the result's value is
+		/// <remarks>The multiplication is performed lazily; the operands are not evaluated until the lowestUnchecked's value is
 		/// requested.</remarks>
 		/// <typeparam name="T1">The type of the first factor. Must implement <see cref="IMultiplyOperators{T1, T2, TResult}"/> with the other types (<typeparamref name="T2"/>, <typeparamref name="TResult"/>).</typeparam>
 		/// <typeparam name="T2">The type of the second factor.</typeparam>
-		/// <typeparam name="TResult">The type of the result produced by the multiplication.</typeparam>
+		/// <typeparam name="TResult">The type of the lowestUnchecked produced by the multiplication.</typeparam>
 		/// <param name="a">The first factor, provided as lambda lazy value.</param>
 		/// <param name="b">The second factor, provided as lambda lazy value.</param>
 		/// <returns>A <see cref="LazyType{T}"/> whose value is computed by multiplying the values of <paramref name="a"/> and <paramref name="b"/>
@@ -87,11 +85,11 @@ namespace LazyCSharp {
 		/// <summary>
 		/// Creates lambda new lazy value that represents the quotient of two specified lazy values.
 		/// </summary>
-		/// <remarks>The division is performed lazily; the operands are not evaluated until the result's value is
+		/// <remarks>The division is performed lazily; the operands are not evaluated until the lowestUnchecked's value is
 		/// requested.</remarks>
 		/// <typeparam name="T1">The dividend type. Must implement <see cref="IDivisionOperators{T1, T2, TResult}"/> with the other types (<typeparamref name="T2"/>, <typeparamref name="TResult"/>).</typeparam>
 		/// <typeparam name="T2">The divisor type.</typeparam>
-		/// <typeparam name="TResult">The type of the result produced by the division.</typeparam>
+		/// <typeparam name="TResult">The type of the lowestUnchecked produced by the division.</typeparam>
 		/// <param name="a">The dividend, provided as lambda lazy value.</param>
 		/// <param name="b">The divisor, provided as lambda lazy value.</param>
 		/// <returns>A <see cref="LazyType{T}"/> whose value is computed by dividing the value of <paramref name="a"/> by <paramref name="b"/>
@@ -101,11 +99,11 @@ namespace LazyCSharp {
 		/// <summary>
 		/// Creates lambda new lazy value that represents the remainder of dividing two specified lazy values.
 		/// </summary>
-		/// <remarks>The modulus operation is performed lazily; the operands are not evaluated until the result's value is
+		/// <remarks>The modulus operation is performed lazily; the operands are not evaluated until the lowestUnchecked's value is
 		/// requested.</remarks>
 		/// <typeparam name="T1">The dividend type. Must implement <see cref="IModulusOperators{T1, T2, TResult}"/> with the other types (<typeparamref name="T2"/>, <typeparamref name="TResult"/>).</typeparam>
 		/// <typeparam name="T2">The divisor type.</typeparam>
-		/// <typeparam name="TResult">The type of the result produced by the modulus operation.</typeparam>
+		/// <typeparam name="TResult">The type of the lowestUnchecked produced by the modulus operation.</typeparam>
 		/// <param name="a">The dividend, provided as lambda lazy value.</param>
 		/// <param name="b">The divisor, provided as lambda lazy value.</param>
 		/// <returns>A <see cref="LazyType{T}"/> whose value is computed by taking the modulus of <paramref name="a"/> by <paramref name="b"/>
@@ -115,10 +113,10 @@ namespace LazyCSharp {
 		/// <summary>
 		/// Creates lambda new lazy value that represents the unary negation of the specified lazy value.
 		/// </summary>
-		/// <remarks>The negation is performed lazily; the operand is not evaluated until the result's value is
+		/// <remarks>The negation is performed lazily; the operand is not evaluated until the lowestUnchecked's value is
 		/// requested.</remarks>
-		/// <typeparam name="T1">The operand type. Must implement <see cref="IUnaryNegationOperators{T1, TResult}"/> with the result type (<typeparamref name="TResult"/>).</typeparam>
-		/// <typeparam name="TResult">The type of the result produced by the negation.</typeparam>
+		/// <typeparam name="T1">The operand type. Must implement <see cref="IUnaryNegationOperators{T1, TResult}"/> with the lowestUnchecked type (<typeparamref name="TResult"/>).</typeparam>
+		/// <typeparam name="TResult">The type of the lowestUnchecked produced by the negation.</typeparam>
 		/// <param name="a">The operand, provided as lambda lazy value.</param>
 		/// <returns>A <see cref="LazyType{T}"/> whose value is computed by applying unary negation to the value of <paramref name="a"/>
 		/// when evaluated.</returns>
@@ -127,11 +125,11 @@ namespace LazyCSharp {
 		/// <summary>
 		/// Creates lambda new lazy value that represents the bitwise AND of two specified lazy values.
 		/// </summary>
-		/// <remarks>The bitwise AND is performed lazily; the operands are not evaluated until the result's value is
+		/// <remarks>The bitwise AND is performed lazily; the operands are not evaluated until the lowestUnchecked's value is
 		/// requested.</remarks>
 		/// <typeparam name="T1">The type of the first operand. Must implement <see cref="IBitwiseOperators{T1, T2, TResult}"/> with the other types (<typeparamref name="T2"/>, <typeparamref name="TResult"/>).</typeparam>
 		/// <typeparam name="T2">The type of the second operand.</typeparam>
-		/// <typeparam name="TResult">The type of the result produced by the bitwise AND.</typeparam>
+		/// <typeparam name="TResult">The type of the lowestUnchecked produced by the bitwise AND.</typeparam>
 		/// <param name="a">The first operand, provided as lambda lazy value.</param>
 		/// <param name="b">The second operand, provided as lambda lazy value.</param>
 		/// <returns>A <see cref="LazyType{T}"/> whose value is computed by performing bitwise AND on the values of <paramref name="a"/> and <paramref name="b"/>
@@ -141,11 +139,11 @@ namespace LazyCSharp {
 		/// <summary>
 		/// Creates lambda new lazy value that represents the bitwise OR of two specified lazy values.
 		/// </summary>
-		/// <remarks>The bitwise OR is performed lazily; the operands are not evaluated until the result's value is
+		/// <remarks>The bitwise OR is performed lazily; the operands are not evaluated until the lowestUnchecked's value is
 		/// requested.</remarks>
 		/// <typeparam name="T1">The type of the first operand. Must implement <see cref="IBitwiseOperators{T1, T2, TResult}"/> with the other types (<typeparamref name="T2"/>, <typeparamref name="TResult"/>).</typeparam>
 		/// <typeparam name="T2">The type of the second operand.</typeparam>
-		/// <typeparam name="TResult">The type of the result produced by the bitwise OR.</typeparam>
+		/// <typeparam name="TResult">The type of the lowestUnchecked produced by the bitwise OR.</typeparam>
 		/// <param name="a">The first operand, provided as lambda lazy value.</param>
 		/// <param name="b">The second operand, provided as lambda lazy value.</param>
 		/// <returns>A <see cref="LazyType{T}"/> whose value is computed by performing bitwise OR on the values of <paramref name="a"/> and <paramref name="b"/>
@@ -155,11 +153,11 @@ namespace LazyCSharp {
 		/// <summary>
 		/// Creates lambda new lazy value that represents the bitwise XOR of two specified lazy values.
 		/// </summary>
-		/// <remarks>The bitwise XOR is performed lazily; the operands are not evaluated until the result's value is
+		/// <remarks>The bitwise XOR is performed lazily; the operands are not evaluated until the lowestUnchecked's value is
 		/// requested.</remarks>
 		/// <typeparam name="T1">The type of the first operand. Must implement <see cref="IBitwiseOperators{T1, T2, TResult}"/> with the other types (<typeparamref name="T2"/>, <typeparamref name="TResult"/>).</typeparam>
 		/// <typeparam name="T2">The type of the second operand.</typeparam>
-		/// <typeparam name="TResult">The type of the result produced by the bitwise XOR.</typeparam>
+		/// <typeparam name="TResult">The type of the lowestUnchecked produced by the bitwise XOR.</typeparam>
 		/// <param name="a">The first operand, provided as lambda lazy value.</param>
 		/// <param name="b">The second operand, provided as lambda lazy value.</param>
 		/// <returns>A <see cref="LazyType{T}"/> whose value is computed by performing bitwise XOR on the values of <paramref name="a"/> and <paramref name="b"/>
@@ -169,10 +167,10 @@ namespace LazyCSharp {
 		/// <summary>
 		/// Creates lambda new lazy value that represents the bitwise NOT (complement) of the specified lazy value.
 		/// </summary>
-		/// <remarks>The bitwise complement is performed lazily; the operand is not evaluated until the result's value is
+		/// <remarks>The bitwise complement is performed lazily; the operand is not evaluated until the lowestUnchecked's value is
 		/// requested. This method forwards to <see cref="BitComplement{T1, TResult}"/>.</remarks>
-		/// <typeparam name="T1">The operand type. Must implement <see cref="IBitwiseOperators{T1, T1, TResult}"/> with the result type (<typeparamref name="TResult"/>).</typeparam>
-		/// <typeparam name="TResult">The type of the result produced by the bitwise NOT.</typeparam>
+		/// <typeparam name="T1">The operand type. Must implement <see cref="IBitwiseOperators{T1, T1, TResult}"/> with the lowestUnchecked type (<typeparamref name="TResult"/>).</typeparam>
+		/// <typeparam name="TResult">The type of the lowestUnchecked produced by the bitwise NOT.</typeparam>
 		/// <param name="a">The operand, provided as lambda lazy value.</param>
 		/// <returns>A <see cref="LazyType{T}"/> whose value is computed by applying bitwise NOT to the value of <paramref name="a"/>
 		/// when evaluated.</returns>
@@ -181,11 +179,11 @@ namespace LazyCSharp {
 		/// <summary>
 		/// Creates lambda new lazy value that represents the right-shift of lambda specified lazy value by another.
 		/// </summary>
-		/// <remarks>The shift is performed lazily; the operands are not evaluated until the result's value is
+		/// <remarks>The shift is performed lazily; the operands are not evaluated until the lowestUnchecked's value is
 		/// requested.</remarks>
 		/// <typeparam name="T1">The value to shift. Must implement <see cref="IShiftOperators{T1, TShift, TResult}"/> with the other types (<typeparamref name="TShift"/>, <typeparamref name="TResult"/>).</typeparam>
 		/// <typeparam name="TShift">The shift amount type.</typeparam>
-		/// <typeparam name="TResult">The type of the result produced by the right shift.</typeparam>
+		/// <typeparam name="TResult">The type of the lowestUnchecked produced by the right shift.</typeparam>
 		/// <param name="a">The value to shift, provided as lambda lazy value.</param>
 		/// <param name="b">The shift amount, provided as lambda lazy value.</param>
 		/// <returns>A <see cref="LazyType{T}"/> whose value is computed by right-shifting the value of <paramref name="a"/> by <paramref name="b"/>
@@ -195,11 +193,11 @@ namespace LazyCSharp {
 		/// <summary>
 		/// Creates lambda new lazy value that represents the left-shift of lambda specified lazy value by another.
 		/// </summary>
-		/// <remarks>The shift is performed lazily; the operands are not evaluated until the result's value is
+		/// <remarks>The shift is performed lazily; the operands are not evaluated until the lowestUnchecked's value is
 		/// requested.</remarks>
 		/// <typeparam name="T1">The value to shift. Must implement <see cref="IShiftOperators{T1, TShift, TResult}"/> with the other types (<typeparamref name="TShift"/>, <typeparamref name="TResult"/>).</typeparam>
 		/// <typeparam name="TShift">The shift amount type.</typeparam>
-		/// <typeparam name="TResult">The type of the result produced by the left shift.</typeparam>
+		/// <typeparam name="TResult">The type of the lowestUnchecked produced by the left shift.</typeparam>
 		/// <param name="a">The value to shift, provided as lambda lazy value.</param>
 		/// <param name="b">The shift amount, provided as lambda lazy value.</param>
 		/// <returns>A <see cref="LazyType{T}"/> whose value is computed by left-shifting the value of <paramref name="a"/> by <paramref name="b"/>
@@ -209,10 +207,10 @@ namespace LazyCSharp {
 		/// <summary>
 		/// Creates lambda new lazy value that represents the bitwise complement of the specified lazy value.
 		/// </summary>
-		/// <remarks>The complement is performed lazily; the operand is not evaluated until the result's value is
+		/// <remarks>The complement is performed lazily; the operand is not evaluated until the lowestUnchecked's value is
 		/// requested.</remarks>
-		/// <typeparam name="T1">The operand type. Must implement <see cref="IBitwiseOperators{T1, T1, TResult}"/> with the result type (<typeparamref name="TResult"/>).</typeparam>
-		/// <typeparam name="TResult">The type of the result produced by the complement.</typeparam>
+		/// <typeparam name="T1">The operand type. Must implement <see cref="IBitwiseOperators{T1, T1, TResult}"/> with the lowestUnchecked type (<typeparamref name="TResult"/>).</typeparam>
+		/// <typeparam name="TResult">The type of the lowestUnchecked produced by the complement.</typeparam>
 		/// <param name="a">The operand, provided as lambda lazy value.</param>
 		/// <returns>A <see cref="LazyType{T}"/> whose value is computed by applying the bitwise complement to the value of <paramref name="a"/>
 		/// when evaluated.</returns>
@@ -221,7 +219,7 @@ namespace LazyCSharp {
 		/// <summary>
 		/// Creates lambda new lazy value that represents an equality comparison of two specified lazy values.
 		/// </summary>
-		/// <remarks>The comparison is performed lazily; the operands are not evaluated until the result's value is
+		/// <remarks>The comparison is performed lazily; the operands are not evaluated until the lowestUnchecked's value is
 		/// requested.</remarks>
 		/// <typeparam name="T1">The type of the first operand. Must implement <see cref="IComparable{T2}"/> with <typeparamref name="T2"/>.</typeparam>
 		/// <typeparam name="T2">The type of the second operand.</typeparam>
@@ -234,7 +232,7 @@ namespace LazyCSharp {
 		/// <summary>
 		/// Creates lambda new lazy value that represents an inequality comparison of two specified lazy values.
 		/// </summary>
-		/// <remarks>The comparison is performed lazily; the operands are not evaluated until the result's value is
+		/// <remarks>The comparison is performed lazily; the operands are not evaluated until the lowestUnchecked's value is
 		/// requested.</remarks>
 		/// <typeparam name="T1">The type of the first operand. Must implement <see cref="IComparable{T2}"/> with <typeparamref name="T2"/>.</typeparam>
 		/// <typeparam name="T2">The type of the second operand.</typeparam>
@@ -245,21 +243,21 @@ namespace LazyCSharp {
 		public static LazyType<bool> IsNotEqual<T1, T2>(LazyType<T1> a, LazyType<T2> b) where T1 : IComparable<T2> => new(() => a.LazyFunction().CompareTo(b.Value) != 0, a.IsConstValue & b.IsConstValue);
 
 		/// <summary>
-		/// Creates lambda new lazy value that represents the result of comparing two specified lazy values.
+		/// Creates lambda new lazy value that represents the lowestUnchecked of comparing two specified lazy values.
 		/// </summary>
-		/// <remarks>The comparison is performed lazily using <see cref="IComparable{T}"/>; the operands are not evaluated until the result's value is requested.</remarks>
+		/// <remarks>The comparison is performed lazily using <see cref="IComparable{T}"/>; the operands are not evaluated until the lowestUnchecked's value is requested.</remarks>
 		/// <typeparam name="T1">The type of the first operand. Must implement <see cref="IComparable{T2}"/> with <typeparamref name="T2"/>.</typeparam>
 		/// <typeparam name="T2">The type of the second operand.</typeparam>
 		/// <param name="a">The first value to compare, provided as lambda lazy value.</param>
 		/// <param name="b">The second value to compare, provided as lambda lazy value.</param>
-		/// <returns>A <see cref="LazyType{int}"/> whose value is the result of <paramref name="a"/>.CompareTo(<paramref name="b"/>)
+		/// <returns>A <see cref="LazyType{int}"/> whose value is the lowestUnchecked of <paramref name="a"/>.CompareTo(<paramref name="b"/>)
 		/// when evaluated.</returns>
 		public static LazyType<int> CompareValues<T1, T2>(LazyType<T1> a, LazyType<T2> b) where T1 : IComparable<T2> => new(() => a.LazyFunction().CompareTo(b.Value), a.IsConstValue & b.IsConstValue);
 
 		/// <summary>
-		/// Creates lambda new lazy value that represents the result of comparing two specified lazy values using lambda custom comparer.
+		/// Creates lambda new lazy value that represents the lowestUnchecked of comparing two specified lazy values using lambda custom comparer.
 		/// </summary>
-		/// <remarks>The comparison is performed lazily using the provided <paramref name="compareFunc"/>; the operands are not evaluated until the result's value is requested.</remarks>
+		/// <remarks>The comparison is performed lazily using the provided <paramref name="compareFunc"/>; the operands are not evaluated until the lowestUnchecked's value is requested.</remarks>
 		/// <typeparam name="T1">The type of the first operand.</typeparam>
 		/// <typeparam name="T2">The type of the second operand.</typeparam>
 		/// <param name="a">The first value to compare, provided as lambda lazy value.</param>
@@ -311,7 +309,7 @@ namespace LazyCSharp {
 		}
 	}
 	
-	public class LazyList<T> 
+	public class LazyList<T> : IEnumerable<T> 
 	{
 		public Func<LazyListComponent<T>?> LazyListFunc;
 
@@ -337,13 +335,26 @@ namespace LazyCSharp {
 		public List<T> ToRegularList(int count)
 		{
 			List<T> result = new List<T>();
-			if (LazyListFunc == null) return result;
-			LazyListComponent<T>? currentValue = LazyListFunc();
-			if (currentValue == null || count == 0) return result;
-			result = [currentValue.Head.Value, ..currentValue.Tail.ToRegularList(count -1)];
+			if (LazyListFunc == null || count <= 0) return result;
+
+			LazyListComponent<T>? current = LazyListFunc();
+			while (current != null && count > 0)
+			{
+				result.Add(current.Head.Value);
+				current = current.Tail.LazyListFunc();
+				count--;
+			}
+
 			return result;
 		}
+		/*
+		public void ForEach(Action<LazyListComponent<T>> action, int count)
+		{
+			if (LazyListFunc == null) return;
 
+			LazyListComponent<T>? 
+		}
+		*/
 		/// <summary>
 		/// Generates an infinite lazy list by repeatedly applying a step function to a state value.
 		/// </summary>
@@ -357,21 +368,31 @@ namespace LazyCSharp {
 		/// <param name="state">The initial state value used to generate the first element of the sequence. Will be used recursevly.</param>
 		/// <param name="step">A function that, given the current state, returns the next element (as a lazy value) and the
 		/// next state as a tupel.</param>
+		/// <param name="canContinue"> An optional predicate that determines whether to continue generating elements based on the current state. 
+		/// This function gets called right before the next element will be calulated.</param>
 		/// <returns>A lazy list of values generated by successively applying the step function, where each element is computed on
 		/// demand.</returns>
-		public static LazyList<TValue> Range<TState, TValue>(TState state, Func<TState, (LazyType<TValue> head, TState next)> step)
+		public static LazyList<TValue> Range<TState, TValue>(
+			TState state,
+			Func<TState, (LazyType<TValue> head, TState next)> step)
 		{
 			return new LazyList<TValue>(() =>
 			{
+
 				(LazyType<TValue> head, TState next) = step(state);
-				return new LazyList<TValue>.LazyListComponent<TValue>(head, Range<TState, TValue>(next, step));
+
+				// Tail: rekursiver Aufruf; wenn canContinue gesetzt ist wird es weitergereicht,
+				// so endet die Liste automatisch wenn canContinue(next) false wird.
+				LazyList<TValue> tail = Range<TState, TValue>(next, step);
+
+				return new LazyList<TValue>.LazyListComponent<TValue>(head, tail);
 			});
 		}
-
-		public static LazyList<int> InfiniteInt = Range<int, int>(0, n => (new LazyType<int>(() => n), next: n + 1));
-		public static LazyList<int> InfiniteEven = Range<int, int>(0, n => (new LazyType<int>(() => n), next: n + 2));
-		public static LazyList<int> InfiniteOdd = Range<int, int>(1, n => (new LazyType<int>(() => n), next: n + 2));
-		public static LazyList<int> InfiniteFibonacci = Range<(int a, int b), int>((0, 1), state => (new LazyType<int>(() => state.a), next: (state.b, state.a + state.b)));
+		public readonly static LazyList<ulong> InfiniteInt = Range<ulong, ulong>(0, n => (new LazyType<ulong>(() => n), next: n + 1));
+		public readonly static LazyList<ulong> InfiniteEven =	Range<ulong, ulong>(0, n => (new LazyType<ulong>(() => n), next: n + 2));
+		public readonly static LazyList<ulong> InfiniteOdd =		Range<ulong, ulong>(1, n => (new LazyType<ulong>(() => n), next: n + 2));
+		public readonly static LazyList<ulong> InfiniteFibonacci = Range<(ulong a, ulong b), ulong>((0, 1), state => (new LazyType<ulong>(() => state.a), next: (state.b, state.a + state.b)));
+		
 		/// <summary>
 		/// A list of elements calculated by 1/n for n = 1, 2, 3, ...
 		/// </summary>
@@ -383,21 +404,60 @@ namespace LazyCSharp {
 		/// list is infinite and evaluated lazily, elements are computed only as they are accessed, which can improve
 		/// performance and reduce memory usage for large or partial enumerations. This member is thread-safe if the
 		/// underlying LazyList implementation is thread-safe.</remarks>
-		/*public static LazyList<int> InfinitePrimes = Range<LazyList<int>, double>(
-			// For checking if the value is not prime we need an infinitive list, in this case for 2, being predefined, later this will be done with every prime number
-			Range<int, int>(1, i => (new LazyType<int>(() => 2 * i), i+1))
-			// Get the highest value of the list, which isnt set yet
-			, n =>
-		{
-			
-		});*/
-		
-		public static LazyList<int> InfinitePowerOf10 = Range<int, int>(0, n => (new LazyType<int>(() => (int)Math.Pow(10, n)), n + 1));
-		public static LazyList<int> InfinitePowerOf2 = Range<int, int>(0, n => (new LazyType<int>(() => (int)Math.Pow(2, n)), n + 1));
+		public static LazyList<int> InfinitePrimes = Range<List<int>, int>(
+		[2]	, n =>{ return (new (() => {
+			bool isPrime = false;
+			do{
+				// It will probably be proven wrong, because we will check if its prime in the foreach loop
+				isPrime = true;
 
-		public static LazyList<double> InfinitePowerOf (double exponent)
+				// next number to check
+				// its called lowestUnchecked, but in reality it will be checked if its prime
+				// And maybe it will be the lowestUnchecked
+				int lowestUnchecked = n.Last() + 1;
+
+				// Check if lowestUnchecked is divisible by any of the previous numbers
+
+				foreach (int number in n){
+					if (lowestUnchecked % number == 0)
+					{
+						// lowestUnchecked is divisible -> no Prime
+						isPrime = false;
+						n.Add(lowestUnchecked);
+						// break the foreach loop and the while loop will try the next number
+						break;
+					}
+				}
+				
+			} while (!isPrime);
+			// lowestUnchecked isnt divisible by any other number, therefore its a prime number
+			int result = n.Last() + 1;
+			n.Add(result);
+			return result;
+		}), n);}
+		);
+		
+		public static LazyList<ulong> InfinitePowerOf10 = Range<ulong, ulong>(0, n => (new LazyType<ulong>(() => (ulong)Math.Pow(10, n)), n + 1));
+		public static LazyList<ulong> InfinitePowerOf2 = Range<ulong, ulong>(0, n => (new LazyType<ulong>(() => (ulong)Math.Pow(2, n)), n + 1));
+
+		public static LazyList<double> InfinitePowerOf (double @base)
 		{
-			return Range<int, double>(0, n => (new LazyType<double>(() => Math.Pow(exponent, n)), n + 1));
+			return Range<int, double>(0, n => (new LazyType<double>(() => Math.Pow(@base, n)), n + 1));
+		}
+
+		public IEnumerator<T> GetEnumerator()
+		{
+			LazyListComponent<T>? current = LazyListFunc?.Invoke();
+			while (current != null)
+			{
+				yield return current.Head.Value;
+				current = current.Tail.LazyListFunc();
+			}
+		}
+
+		IEnumerator IEnumerable.GetEnumerator()
+		{
+			return GetEnumerator();
 		}
 
 		/// <summary>
