@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "I:\\OneDrive\\Programmieren\\VS Projekte\\LaC-Sharp\\LaC-Sharp.csproj",
+      "projectUniqueName": "E:\\_Projekte\\LaCSharp\\LaC-Sharp\\LaC-Sharp.csproj",
       "projectName": "LaC-Sharp",
-      "projectPath": "I:\\OneDrive\\Programmieren\\VS Projekte\\LaC-Sharp\\LaC-Sharp.csproj",
+      "projectPath": "E:\\_Projekte\\LaCSharp\\LaC-Sharp\\LaC-Sharp.csproj",
       "packagesPath": "C:\\Users\\Lucas\\.nuget\\packages\\",
-      "outputPath": "I:\\OneDrive\\Programmieren\\VS Projekte\\LaC-Sharp\\obj\\",
+      "outputPath": "E:\\_Projekte\\LaCSharp\\LaC-Sharp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,6 +28,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "I:\\OneDrive\\Programmieren\\NuGetPackages": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -67,7 +68,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",

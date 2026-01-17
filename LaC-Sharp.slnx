@@ -1,4 +1,3 @@
 <Solution>
-  <Project Path="../TestApp/TestApp.csproj" Id="da4af495-53c2-4a54-b5be-db0e2157f6b5" />
   <Project Path="LaC-Sharp.csproj" />
 </Solution>
