@@ -8,27 +8,25 @@
     "net10.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Lucas\\.nuget\\packages\\": {}
+    "/home/Louci/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\_Projekte\\LaCSharp\\LaC-Sharp\\LaC-Sharp.csproj",
+      "projectUniqueName": "/media/linux-hdd/Projekte/LaC-Sharp/LaC-Sharp.csproj",
       "projectName": "LaC-Sharp",
-      "projectPath": "E:\\_Projekte\\LaCSharp\\LaC-Sharp\\LaC-Sharp.csproj",
-      "packagesPath": "C:\\Users\\Lucas\\.nuget\\packages\\",
-      "outputPath": "E:\\_Projekte\\LaCSharp\\LaC-Sharp\\obj\\",
+      "projectPath": "/media/linux-hdd/Projekte/LaC-Sharp/LaC-Sharp.csproj",
+      "packagesPath": "/home/Louci/.nuget/packages/",
+      "outputPath": "/media/linux-hdd/Projekte/LaC-Sharp/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/home/Louci/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net10.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "I:\\OneDrive\\Programmieren\\NuGetPackages": {},
+        "/usr/lib64/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -68,7 +66,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/10.0.112/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",
